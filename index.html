@@ -482,5 +482,20 @@ document.getElementById('exportCSV').addEventListener('click', ()=>{
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  // Add a toggle button for mobile sidebar
+  const toggleSidebarBtn = document.createElement('button');
+  toggleSidebarBtn.textContent = '☰';
+  toggleSidebarBtn.className = 'btn btn-outline-secondary d-lg-none';
+  toggleSidebarBtn.style.position = 'fixed';
+  toggleSidebarBtn.style.top = '1rem';
+  toggleSidebarBtn.style.left = '1rem';
+  toggleSidebarBtn.style.zIndex = '1100';
+  document.body.appendChild(toggleSidebarBtn);
+
+  toggleSidebarBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+  });
+</script>
 </body>
 </html>
